@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f4f7f5" />
+    <title>Quiet Space - Wellbeing Support Prototype</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Wellbeing support prototype</p>
+          <h1>Quiet Space</h1>
+        </div>
+        <button id="resetButton" class="text-button" type="button">Clear this session</button>
+      </header>
+
+      <aside class="notice" aria-label="Safety notice">
+        <strong>This is not a diagnostic or emergency service.</strong>
+        <span>If you or someone else may be in immediate danger, contact local emergency services or a trusted person.</span>
+      </aside>
+
+      <section class="workspace">
+        <div class="chat-panel">
+          <div id="chatLog" class="chat-log" aria-live="polite"></div>
+
+          <form id="chatForm" class="chat-form">
+            <label class="sr-only" for="messageInput">Describe how you feel</label>
+            <input
+              id="messageInput"
+              name="message"
+              type="text"
+              autocomplete="off"
+              placeholder="Describe how you feel in one sentence..."
+            />
+            <button type="submit">Send</button>
+          </form>
+        </div>
+
+        <aside class="check-in-panel" aria-label="Quick check-in">
+          <h2>Quick check-in</h2>
+
+          <fieldset>
+            <legend>What feels most present?</legend>
+            <div id="emotionOptions" class="choice-grid">
+              <button type="button" data-emotion="Anxious" aria-pressed="false">Anxious</button>
+              <button type="button" data-emotion="Sad" aria-pressed="false">Sad</button>
+              <button type="button" data-emotion="Frustrated" aria-pressed="false">Frustrated</button>
+              <button type="button" data-emotion="Calm" aria-pressed="false">Calm</button>
+              <button type="button" data-emotion="Tired" aria-pressed="false">Tired</button>
+            </div>
+          </fieldset>
+
+          <label class="range-label" for="stressRange">
+            Stress level: <strong id="stressValue">5</strong>/10
+          </label>
+          <input id="stressRange" type="range" min="1" max="10" value="5" />
+
+          <fieldset>
+            <legend>What would you like to try first?</legend>
+            <div id="actionOptions" class="choice-grid">
+              <button type="button" data-action="Breathe" aria-pressed="false">Slow breathing</button>
+              <button type="button" data-action="Rest" aria-pressed="false">A short break</button>
+              <button type="button" data-action="Task" aria-pressed="false">Break down a task</button>
+            </div>
+          </fieldset>
+
+          <button id="checkInButton" class="primary-button" type="button">
+            Generate support
+          </button>
+        </aside>
+      </section>
+
+      <section id="exerciseCard" class="exercise-card" hidden>
+        <div>
+          <p class="eyebrow">Current exercise</p>
+          <h2 id="exerciseTitle">Slow breathing</h2>
+          <p id="exerciseText">Inhale for 4 seconds, pause for 2, and exhale for 6.</p>
+        </div>
+        <button id="exerciseButton" type="button">Start timer</button>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

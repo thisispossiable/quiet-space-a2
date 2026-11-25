@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="620" viewBox="0 0 1100 620">
+  <rect width="1100" height="620" fill="#f7faf8"/>
+  <text x="550" y="55" text-anchor="middle" font-family="Segoe UI, Arial" font-size="30" font-weight="700" fill="#26382f">Quiet Space: System Diagram</text>
+  <rect x="45" y="110" width="220" height="170" rx="18" fill="#ffffff" stroke="#91a99c" stroke-width="2"/>
+  <text x="155" y="145" text-anchor="middle" font-family="Segoe UI, Arial" font-size="20" font-weight="700" fill="#26382f">User Interface</text>
+  <text x="155" y="180" text-anchor="middle" font-family="Segoe UI, Arial" font-size="16" fill="#52665d">Emotion / stress input</text>
+  <text x="155" y="210" text-anchor="middle" font-family="Segoe UI, Arial" font-size="16" fill="#52665d">Text message</text>
+  <text x="155" y="240" text-anchor="middle" font-family="Segoe UI, Arial" font-size="16" fill="#52665d">Exercise controls</text>
+  <rect x="440" y="110" width="220" height="170" rx="18" fill="#edf4ef" stroke="#668b78" stroke-width="2"/>
+  <text x="550" y="145" text-anchor="middle" font-family="Segoe UI, Arial" font-size="20" font-weight="700" fill="#26382f">Rule Engine</text>
+  <text x="550" y="180" text-anchor="middle" font-family="Segoe UI, Arial" font-size="16" fill="#52665d">Emotion + stress state</text>
+  <text x="550" y="210" text-anchor="middle" font-family="Segoe UI, Arial" font-size="16" fill="#52665d">Safety phrase check</text>
+  <text x="550" y="240" text-anchor="middle" font-family="Segoe UI, Arial" font-size="16" fill="#52665d">Fixed response rules</text>
+  <rect x="835" y="110" width="220" height="170" rx="18" fill="#ffffff" stroke="#91a99c" stroke-width="2"/>
+  <text x="945" y="145" text-anchor="middle" font-family="Segoe UI, Arial" font-size="20" font-weight="700" fill="#26382f">Response & Control</text>
+  <text x="945" y="180" text-anchor="middle" font-family="Segoe UI, Arial" font-size="16" fill="#52665d">Support message</text>
+  <text x="945" y="210" text-anchor="middle" font-family="Segoe UI, Arial" font-size="16" fill="#52665d">Exercise or timer</text>
+  <text x="945" y="240" text-anchor="middle" font-family="Segoe UI, Arial" font-size="16" fill="#52665d">Safety notice</text>
+  <path d="M265 195 H440" stroke="#315b48" stroke-width="4" marker-end="url(#arrow)"/>
+  <path d="M660 195 H835" stroke="#315b48" stroke-width="4" marker-end="url(#arrow)"/>
+  <path d="M945 280 C945 355 945 355 945 390" fill="none" stroke="#315b48" stroke-width="4" marker-end="url(#arrow)"/>
+  <rect x="835" y="390" width="220" height="155" rx="18" fill="#fbfbea" stroke="#c6ca91" stroke-width="2"/>
+  <text x="945" y="425" text-anchor="middle" font-family="Segoe UI, Arial" font-size="20" font-weight="700" fill="#26382f">Browser Storage</text>
+  <text x="945" y="460" text-anchor="middle" font-family="Segoe UI, Arial" font-size="16" fill="#52665d">localStorage only</text>
+  <text x="945" y="490" text-anchor="middle" font-family="Segoe UI, Arial" font-size="16" fill="#52665d">No server upload</text>
+  <text x="945" y="520" text-anchor="middle" font-family="Segoe UI, Arial" font-size="16" fill="#52665d">Clear session available</text>
+  <rect x="45" y="390" width="615" height="155" rx="18" fill="#ffffff" stroke="#91a99c" stroke-width="2"/>
+  <text x="352" y="425" text-anchor="middle" font-family="Segoe UI, Arial" font-size="20" font-weight="700" fill="#26382f">State Legend</text>
+  <circle cx="95" cy="462" r="8" fill="#315b48"/>
+  <text x="115" y="468" font-family="Segoe UI, Arial" font-size="16" fill="#52665d">Implemented: interface and local control</text>
+  <circle cx="95" cy="500" r="8" fill="#668b78"/>
+  <text x="115" y="506" font-family="Segoe UI, Arial" font-size="16" fill="#52665d">Simulated: transparent rule-based AI behaviour</text>
+  <circle cx="95" cy="538" r="8" fill="#b3bd8a"/>
+  <text x="115" y="544" font-family="Segoe UI, Arial" font-size="16" fill="#52665d">Not planned in this prototype: clinical assessment</text>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#315b48"/>
+    </marker>
+  </defs>
+</svg>

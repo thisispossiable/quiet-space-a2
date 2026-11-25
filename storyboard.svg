@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="620" viewBox="0 0 1400 620">
+  <rect width="1400" height="620" fill="#f7faf8"/>
+  <text x="700" y="48" text-anchor="middle" font-family="Segoe UI, Arial" font-size="30" font-weight="700" fill="#26382f">Illustrated Interaction — Three Implemented Scenarios</text>
+  <g transform="translate(40,90)">
+    <rect width="420" height="470" rx="18" fill="#fff" stroke="#d5e0da" stroke-width="2"/>
+    <text x="210" y="38" text-anchor="middle" font-family="Segoe UI, Arial" font-size="20" font-weight="700" fill="#26382f">1. Moderate stress</text>
+    <rect x="25" y="70" width="370" height="70" rx="12" fill="#edf4ef"/>
+    <text x="210" y="98" text-anchor="middle" font-family="Segoe UI, Arial" font-size="15" fill="#52665d">User: selects “Anxious”</text>
+    <text x="210" y="122" text-anchor="middle" font-family="Segoe UI, Arial" font-size="15" fill="#52665d">Stress: 6/10</text>
+    <path d="M210 140 V180" stroke="#315b48" stroke-width="3" marker-end="url(#a)"/>
+    <rect x="25" y="195" width="370" height="100" rx="12" fill="#315b48"/>
+    <text x="210" y="228" text-anchor="middle" font-family="Segoe UI, Arial" font-size="15" fill="#fff">System applies moderate-stress</text>
+    <text x="210" y="252" text-anchor="middle" font-family="Segoe UI, Arial" font-size="15" fill="#fff">and anxious-state rules</text>
+    <text x="210" y="276" text-anchor="middle" font-family="Segoe UI, Arial" font-size="15" fill="#fff">Result: breathing or a short walk</text>
+    <path d="M210 295 V335" stroke="#315b48" stroke-width="3" marker-end="url(#a)"/>
+    <rect x="25" y="350" width="370" height="85" rx="12" fill="#fbfbea" stroke="#c6ca91"/>
+    <text x="210" y="382" text-anchor="middle" font-family="Segoe UI, Arial" font-size="15" fill="#52665d">Control: choose another action</text>
+    <text x="210" y="408" text-anchor="middle" font-family="Segoe UI, Arial" font-size="15" fill="#52665d">or clear the session</text>
+  </g>
+  <g transform="translate(490,90)">
+    <rect width="420" height="470" rx="18" fill="#fff" stroke="#d5e0da" stroke-width="2"/>
+    <text x="210" y="38" text-anchor="middle" font-family="Segoe UI, Arial" font-size="20" font-weight="700" fill="#26382f">2. High stress</text>
+    <rect x="25" y="70" width="370" height="70" rx="12" fill="#edf4ef"/>
+    <text x="210" y="98" text-anchor="middle" font-family="Segoe UI, Arial" font-size="15" fill="#52665d">User: stress 9/10</text>
+    <text x="210" y="122" text-anchor="middle" font-family="Segoe UI, Arial" font-size="15" fill="#52665d">Chooses “Slow breathing”</text>
+    <path d="M210 140 V180" stroke="#315b48" stroke-width="3" marker-end="url(#a)"/>
+    <rect x="25" y="195" width="370" height="100" rx="12" fill="#315b48"/>
+    <text x="210" y="228" text-anchor="middle" font-family="Segoe UI, Arial" font-size="15" fill="#fff">System recommends one three-minute</text>
+    <text x="210" y="252" text-anchor="middle" font-family="Segoe UI, Arial" font-size="15" fill="#fff">breathing exercise and one</text>
+    <text x="210" y="276" text-anchor="middle" font-family="Segoe UI, Arial" font-size="15" fill="#fff">controllable next step</text>
+    <path d="M210 295 V335" stroke="#315b48" stroke-width="3" marker-end="url(#a)"/>
+    <rect x="25" y="350" width="370" height="85" rx="12" fill="#edf4ef"/>
+    <text x="210" y="382" text-anchor="middle" font-family="Segoe UI, Arial" font-size="15" fill="#52665d">Feedback: starts or stops timer</text>
+    <text x="210" y="408" text-anchor="middle" font-family="Segoe UI, Arial" font-size="15" fill="#52665d">and can reassess stress</text>
+  </g>
+  <g transform="translate(940,90)">
+    <rect width="420" height="470" rx="18" fill="#fff" stroke="#d5e0da" stroke-width="2"/>
+    <text x="210" y="38" text-anchor="middle" font-family="Segoe UI, Arial" font-size="20" font-weight="700" fill="#26382f">3. Safety phrase</text>
+    <rect x="25" y="70" width="370" height="70" rx="12" fill="#edf4ef"/>
+    <text x="210" y="98" text-anchor="middle" font-family="Segoe UI, Arial" font-size="15" fill="#52665d">User enters a crisis phrase</text>
+    <text x="210" y="122" text-anchor="middle" font-family="Segoe UI, Arial" font-size="15" fill="#52665d">such as “I want to die”</text>
+    <path d="M210 140 V180" stroke="#315b48" stroke-width="3" marker-end="url(#a)"/>
+    <rect x="25" y="195" width="370" height="100" rx="12" fill="#fbfbea" stroke="#b7be74"/>
+    <text x="210" y="228" text-anchor="middle" font-family="Segoe UI, Arial" font-size="15" fill="#52665d">System overrides ordinary advice</text>
+    <text x="210" y="252" text-anchor="middle" font-family="Segoe UI, Arial" font-size="15" fill="#52665d">and gives emergency / trusted-person</text>
+    <text x="210" y="276" text-anchor="middle" font-family="Segoe UI, Arial" font-size="15" fill="#52665d">guidance</text>
+    <path d="M210 295 V335" stroke="#315b48" stroke-width="3" marker-end="url(#a)"/>
+    <rect x="25" y="350" width="370" height="85" rx="12" fill="#315b48"/>
+    <text x="210" y="382" text-anchor="middle" font-family="Segoe UI, Arial" font-size="15" fill="#fff">Control: fixed safety boundary</text>
+    <text x="210" y="408" text-anchor="middle" font-family="Segoe UI, Arial" font-size="15" fill="#fff">No clinical claim or diagnosis</text>
+  </g>
+  <defs>
+    <marker id="a" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#315b48"/>
+    </marker>
+  </defs>
+</svg>
