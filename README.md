@@ -1,6 +1,6 @@
 # SafeBrowse: Who Carries the Risk?
 
-Prose word count: 550 (headings included; code and setup commands excluded).
+Prose word count: 546 (headings included; code and setup commands excluded).
 
 A1-aligned browser-warning interaction prototype. The repository retains its original `quiet-space-a2` name and earlier wellbeing commits so the change of scope remains traceable.
 
@@ -58,7 +58,7 @@ The student supplied A1, chose the direction and requested changes. Before submi
 
 - [Report source](PROJECT_REPORT.md), [printable report](report.html), [PDF](SafeBrowse-A2-Report.pdf), [editable Word report](SafeBrowse-A2-Report.docx).
 - [System diagram](system-diagram.svg) and [storyboard](storyboard.svg); rendered versions and real UI screenshots are in [evidence](evidence/).
-- Submitted version: Git tag `a2-safebrowse-v1`.
-- [Repository](https://github.com/thisispossiable/quiet-space-a2) is private at the owner's request. Confirm the course accepts private access and invite assessors before submission, or make it public deliberately.
+- Submitted version: Git tag `a2-safebrowse-v1.1`.
+- [Repository](https://github.com/thisispossiable/quiet-space-a2) is public at the owner's request. Assessors can inspect the code, report and development record without signing in.
 
 No separate ZIP is needed. No credentials or original A1 document are included.
