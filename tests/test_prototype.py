@@ -94,6 +94,16 @@ class PrototypeTests(unittest.TestCase):
         self.page.get_by_role("button", name="Open reviewed simulation").click()
         self.assertTrue(self.page.locator("#preview").is_visible())
 
+    def test_guided_review_explanation_names_the_guided_rule(self):
+        self.evaluate_scenario("uncertain", "guided")
+        self.page.get_by_role("button", name="Request a review").click()
+        self.page.get_by_role("button", name="Run scripted review").click()
+        self.assertIn("original warning", self.page.locator("#decisionSummary").inner_text())
+        self.page.get_by_text("Why this decision?").click()
+        explanation = self.page.locator("#ruleExplanation").inner_text()
+        self.assertIn("G1", explanation)
+        self.assertNotIn("P1", explanation)
+
     def test_malware_review_upholds_block(self):
         self.evaluate_scenario("malware")
         self.page.get_by_role("button", name="Request a review").click()

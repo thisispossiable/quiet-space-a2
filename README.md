@@ -1,6 +1,6 @@
 # SafeBrowse: Who Carries the Risk?
 
-Prose word count: 531 (headings included; code and setup commands excluded).
+Prose word count: 534 (headings included; code and setup commands excluded).
 
 A1-aligned browser-warning interaction prototype. The repository retains its original `quiet-space-a2` name and earlier wellbeing commits so the change of scope remains traceable.
 
@@ -38,7 +38,7 @@ python -m unittest discover -s tests -v
 python tools\export_report.py
 ```
 
-Twelve automated tests cover policy outcomes, both review results, internal-only continuation, optional answer feedback, keyboard operation, trace export/reset, storage/network boundaries, narrow layouts and SVG parsing. See [verification evidence](evidence/verification.md) and [screenshots](evidence/). These are agent-run implementation checks, not participant research.
+Thirteen automated tests cover policy outcomes, both review results under each policy, internal-only continuation, optional answer feedback, keyboard operation, trace export/reset, storage/network boundaries, narrow layouts and SVG parsing. See [verification evidence](evidence/verification.md) and [screenshots](evidence/). These are agent-run implementation checks, not participant research.
 
 ## Development record
 

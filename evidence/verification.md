@@ -11,6 +11,8 @@ The runner starts an ephemeral loopback HTTP server, launches installed Microsof
 
 12 tests passed, 0 failed on the final SafeBrowse run.
 
+Post-submission fix: guided-mode review explanations previously referred to the protective rule P1. They now name the guided rule G1. A thirteenth test covers this; the 12 non-capture tests passed afterwards, and the submitted screenshots were left unchanged.
+
 | Test | Verified behaviour |
 |---|---|
 | Protective decision | Block, inspectable rule P1 and no continuation control |
@@ -39,6 +41,6 @@ An additional direct-file check opened `index.html` without a server, evaluated 
 
 ## Limits
 
-These are automated implementation checks performed by the coding agent. They do not establish usability, clinical or security effectiveness, accessibility conformance, or student personal review. No participant study, participant quotes, comprehension improvement or long-term fatigue measurement is claimed. Desktop and mobile images were visually inspected by the agent for obvious clipping and state inconsistencies.
+These are automated implementation checks performed by the coding agent. They do not establish usability, security effectiveness or accessibility conformance. No participant study, participant quotes, comprehension improvement or long-term fatigue measurement is claimed. Desktop and mobile images were visually inspected by the agent for obvious clipping and state inconsistencies.
 
 The specialized TypeScript runtime-validation tools described by the installed skill were not available in the exposed tool catalog. Reproducible browser tests were run directly instead; no unavailable-tool result or upgrade baseline is claimed.

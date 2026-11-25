@@ -190,19 +190,20 @@
 
   function completeReview() {
     state.review = scenarios[state.scenario].reviewClears ? "cleared" : "upheld";
+    const guided = state.policy === "guided";
     byId("reviewActions").replaceChildren();
     if (state.review === "cleared") {
       byId("decisionTitle").textContent = "Review cleared this fixture";
-      byId("decisionSummary").textContent = "The original protective decision has been corrected by the scripted review. You can resume this local task or return to safety. No real website has been verified.";
+      byId("decisionSummary").textContent = `The original ${guided ? "warning" : "protective block"} has been corrected by the scripted review. You can resume this local task or return to safety. No real website has been verified.`;
       byId("decisionBadge").textContent = "SCRIPTED CORRECTION";
       byId("decisionPanel").dataset.kind = "allow";
-      byId("ruleExplanation").textContent = "Initial fixture rule P1 blocked the stale signal. Scripted review R1 clears this authored false-positive case; it is not live verification.";
+      byId("ruleExplanation").textContent = `Initial fixture rule ${guided ? "G1 warned about" : "P1 blocked"} the stale signal. Scripted review R1 clears this authored false-positive case; it is not live verification.`;
       byId("reviewStatus").textContent = "False positive corrected - scripted outcome";
       byId("reviewExplanation").textContent = "The fixture's prewritten review identifies a stale reputation entry. The original decision was not proof of danger. Only this local placeholder is now available.";
       addAction(byId("reviewActions"), "Open reviewed simulation", () => openPreview(true), true);
     } else {
       byId("reviewStatus").textContent = "Block upheld - scripted outcome";
-      byId("reviewExplanation").textContent = "The prewritten review retains the fixture's risk flag. Protective access remains blocked; return to safety instead. This is not an expert review of a real site.";
+      byId("reviewExplanation").textContent = `The prewritten review retains the fixture's risk flag. ${guided ? "Continuation stays withdrawn after review" : "Protective access remains blocked"}; return to safety instead. This is not an expert review of a real site.`;
     }
     byId("statusLine").textContent = "Scripted review complete.";
     record("scripted-review", state.review);
