@@ -1,68 +1,69 @@
-# Assignment 2: Project Report
+# SafeBrowse: Who Carries the Risk?
 
-**Main report word count: approximately 1,075 words**  
-**Abstract word count: 244 words**  
-**Combined report word count: approximately 1,319 words**
+Assignment 2: Project Report
+
+**Abstract: 175 words | Main report: 946 words | Combined: 1121 words**
 
 ## Abstract
 
-Quiet Space is a browser-based, low-risk wellbeing prototype that helps a user name an emotional state, record a stress level and choose a small supportive action. The project addresses a practical problem identified in everyday student life: stress can become difficult to manage when a person has limited time, too many options or no private way to pause and reflect. The prototype provides a calm interface, a stress scale, a short text channel, rule-based wellbeing suggestions, a breathing or rest timer and a fixed safety response. It does not diagnose mental illness or represent itself as a medical service.
+SafeBrowse is an interactive prototype exploring who should make a risk decision when a browser raises a security warning. It develops the argument from my Assignment 1: a warning should not be judged solely by whether someone obeys it, and clicking through should not automatically be treated as informed consent.
 
-The current scope is deliberately narrow. Users can select one of five feelings, enter a stress score from 1 to 10, type a short message and select breathing, rest or task breakdown. JavaScript compares these inputs against visible rules and generates one of three kinds of response: ordinary low-risk guidance, higher-stress guidance or emergency-oriented support. Emotion and stress choices are stored only in browser `localStorage`, with an explicit **Clear this session** control.
+The prototype compares guided user choice with a protective default across four authored scenarios. It explains the signal and rule behind each decision, offers a safe return, and demonstrates recourse when a legitimate site is wrongly flagged. An optional explanation question shows how feedback might address misunderstanding without preventing users from leaving.
 
-The system is a prototype rather than a clinical product. Interfaces and control flow are implemented, while user evaluation and verified referral data remain planned. The system diagram identifies both simulated intelligence and implemented components. Storyboards demonstrate moderate stress, high stress and a safety-phrase scenario. The development record also explains major scope decisions and the review of AI-assisted implementation. The project therefore supports an accountable demonstration of intelligent interaction while preserving clear limits.
+The interface, decision rules, state transitions and local interaction trace are implemented. Threat signals, websites and review outcomes are simulated. No live websites are visited, no trained model is used, and no credentials or browsing history are collected. Automated browser checks provide implementation evidence, not evidence that either policy improves real security or user understanding. The contribution is a bounded, inspectable interaction demonstrating the trade-off between protection, user control and recovery from error.
 
-## Design Rationale and Project Explanation
+## 1. Problem, evidence and scope
 
-The central design decision was to separate the project from a general-purpose conversational assistant. A wellbeing setting introduces risks if the system speaks as though it knows a user's diagnosis or can provide urgent care. Quiet Space therefore uses an explicit rule engine instead of unrestricted generated advice. The system considers the emotion, stress level, selected action and a short list of safety phrases, then returns an understandable response. This approach demonstrates intelligent behaviour without falsely suggesting clinical reasoning or an extensive model.
+My A1, *Who Should get the Risk? Browser Security Warnings and User Responsibility*, questioned whether security interfaces transfer technical responsibility unfairly to users. SafeBrowse turns that question into a comparison users can operate, rather than a claim that more alarming warnings solve the problem.
 
-The first design principle was *human-centred problem framing*. The problem is not simply a lack of information about wellbeing. It is that a person under stress may need a small, immediate next step and an interface that makes choices manageable. The emotion buttons reduce the effort of describing a feeling, and the 1–10 scale adds more information to the response. The text box remains optional, allowing a user to give context without forcing disclosure. This hierarchy is intended to support agency rather than demand disclosure.
+Egelman, Cranor and Hong (2008) found active phishing warnings more effective than the passive warning they tested. This supports interrupting a risky simulated task, not making every notification equally prominent. Sunshine et al. (2009) highlight the costs of ineffective SSL warnings and unnecessary interruptions. Akhawe and Felt (2013) show that behaviour varies across warning types and browser interfaces. Their telemetry records actions, but cannot by itself establish the reasons behind each action.
 
-The choices of *visibility* and *feedback* follow the Week 1–4 concept of system feedback. The selected emotion and preferred action are highlighted; the stress slider updates immediately; sending a message produces an assistant message; and the timer visibly counts down. Feedback is deliberately local and reversible. Users can change a state, try another action or clear the session. These controls demonstrate that the system is an interactive tool rather than a one-way set of instructions. A user should be able to see what was selected and understand why a response changed.
+These findings motivate inspectable decisions and recourse. They do not validate this prototype's rules. A brief wellbeing concept was replaced after revisiting A1: browser warnings provide a stronger evidence-to-design connection. No lecturer feedback or participant findings are claimed.
 
-The rule structure was evidence-led by a simple state mapping. Low stress and calm state receive maintenance suggestions. Moderate stress receives a breathing, walking or planning suggestion. High stress receives a smaller action and a reminder to seek support if difficulties persist. These distinctions are not claimed as medical thresholds. They act as a transparent demonstration of contextual adaptation. Each condition uses a small number of understandable variables, supporting explanation and testing. If more detailed assessment were introduced later, it would require clinical review and would not be passed as currently implemented.
+The studies concern older browser designs, so I use them to frame tensions, not to predict current users' behaviour. The comparison also holds the fixture constant: comparing a dangerous page under one policy with a harmless page under another would confuse policy effects with scenario differences. Four fixtures make that distinction inspectable, while keeping the implementation small enough to explain. The legitimate-site fixture is intentionally not an exceptional hidden case; it is a visible reminder that protection can obstruct a reasonable task.
 
-The *safety boundary* is the most important design requirement. The user can enter a direct crisis phrase, such as “I want to die.” The safety check runs before ordinary stress rules and replaces the normal response with emergency-oriented advice: contact local emergency services or a crisis service and involve a trusted person. The interface remains labelled as a non-diagnostic prototype. This choice prioritises harm prevention over conversational continuity and makes it explicit that a deterministic phrase check has significant limitations.
+## 2. Design choices and trade-offs
 
-A short exercise card provides *direct manipulation and control*. It offers one of the selected actions and a timer. Breathing remains an option rather than an instruction: users can choose an alternative or stop. The three-minute duration is short enough to remain relevant to a student break. It is presented as a voluntary exercise, not evidence of treatment.
+**Responsibility and defaults.** Protective mode blocks every flagged fixture without a bypass. Guided mode interrupts with an explanation but permits internal-only continuation. Changing only the policy on the same scenario makes responsibility allocation visible. Both modes allow unflagged fixtures without warning, reflecting the concern about unnecessary interruptions in Sunshine et al. (2009). Protective mode deliberately also blocks an uncertain fixture: its recoverable false positive exposes the cost of conservative defaults rather than hiding it.
 
-The visual design uses a limited green palette, generous spacing and low-contrast secondary text to reduce visual pressure. The layout changes from two columns to a single column on small screens. The calm tone is an attempt to reflect the wellbeing context, but the design does not depend on decorative imagery. This was a deliberate trade-off: visual clarity was prioritised over polished production effects because the assignment asks for developed evidence and reasons, not maximum feature count.
+**Visibility and feedback.** Each result names the decision, and an expandable explanation identifies the fixture signal and fired rule. For example, an identity mismatch under protective mode produces rule P1 and a block. This lets users inspect what happened instead of accepting an unexplained verdict. Progressive disclosure keeps the initial choice concise while retaining detail. A persistent status line distinguishes an evaluated decision, pending review and internal preview. Text labels accompany colour so colour alone does not communicate risk.
 
-The project uses browser-local storage to make the quick check-in usable without an account or server. This supports privacy, but is also a limitation. Data should not be mistaken for permanent clinical records, and browser storage is not encrypted by the application. Clearing the session removes the record and the interface offers no sharing controls. If a future version needs persistence or analysis, informed consent and a privacy design would be required.
+**Control and recovery.** Returning to safety never requires a questionnaire. For a blocked fixture, requesting review leaves access paused; it does not silently reverse the decision. A separate, explicitly scripted review corrects the stale reputation entry in the legitimate-site scenario, enabling an internal archive preview. The known-risk scenario instead retains its block. This implements the transparency-and-recourse argument in A1 while acknowledging that a real review service would require independent evidence, governance and response times.
 
-## System Diagram
+**Understanding, not compliance alone.** An optional question asks what the decision establishes. Incorrect answers receive an explanation; the correct answer distinguishes a fixture-based concern from proof of harm. The question is deliberately not a test users must pass to escape a warning. A correct selection could be guessed or learned from the wording, so it is not a validated comprehension measure. Likewise, returning to safety is not labelled informed consent or successful risk understanding.
 
-The system diagram shows:
+**Predictability and accessibility.** Explicitly labelled controls, visible keyboard focus, native buttons, a select and radio inputs support predictable operation. Scenario buttons expose selection through `aria-pressed`. Focus moves to the result after evaluation and to review status after review actions. Responsive layouts retain the same decisions at narrow widths. Automated keyboard and overflow checks are useful but do not establish accessibility conformance or replace testing with assistive-technology users.
 
-- the implemented interface, including emotion, stress, message and exercise controls;
-- the implemented rule engine, including stress and safety checks;
-- the response and control layer, including the optional timer;
-- browser-local storage, with no server upload;
-- the distinction between implemented, simulated and planned behaviour.
+## 3. Architecture and illustrated interaction
 
-The diagram makes one information boundary explicit: the interface sends text only to local JavaScript. It does not send data to a model or external service. The rule engine is therefore the implemented form of “AI behaviour,” while a generative model remains out of scope.
+The system diagram separates implemented software from simulated evidence. Authored signals and the selected policy enter a deterministic rule function: no flags means no warning; flagged guided mode means warning; flagged protective mode means block. JavaScript renders the resulting controls. Intelligence is represented by explicit conditional rules, not a trained classifier, live reputation service or generative model. This limits realism but makes decisions reproducible.
 
-## Storyboards and Illustrated Interaction
+![Figure 1. Implemented control flow and simulated boundaries.](evidence/system-diagram.png)
 
-**Implemented moderate-stress scenario.** A user selects “Anxious” and sets stress to 6/10. The interface highlights both choices and shows the value in the chat. The rule engine combines the emotion and level, returns a short breathing or walking suggestion, and displays the exercise card when an action is selected. The user may change the action or clear the session.
+The storyboard follows three complete paths. First, a login mismatch in guided mode produces a warning; the user inspects it and opens an internal placeholder. Second, a known-risk download in protective mode is blocked, and the user returns to safety. Third, an uncertain library fixture is blocked, reviewed and corrected before the legitimate task resumes. All navigation remains inside the demonstration.
 
-**Implemented high-stress scenario.** A user selects stress 9/10 and chooses slow breathing. The rule engine gives a short exercise and asks the user to identify one controllable next step. Starting the timer gives count-down feedback. The high-stress response also states that persistent impairment should lead to trusted or professional support.
+![Figure 2. Three implemented user-system sequences.](evidence/storyboard.png)
 
-**Implemented safety scenario.** A user sends a crisis phrase. The safety check runs before ordinary guidance and produces a fixed notice directing the user to emergency or crisis support and a trusted person. The storyboard marks this as a safety boundary. The implementation does not claim that keyword detection is comprehensive or clinically valid.
+An in-memory trace records scenario, policy, action and outcome for inspection. Export creates a local JSON file only when requested. Reset or reload clears state. No personal text fields, persistent storage, model APIs or analytics are used.
 
-## Repository and Development Evidence
+## 4. Development checks and limitations
 
-The repository contains the runnable HTML, CSS and JavaScript files, [this README](./README.md), [the system diagram](./system-diagram.svg) and [the interaction storyboard](./storyboard.svg). The README records project status, technology, running instructions, major changes and AI assistance.
+Implementation checks cover both policies, unflagged access, review pending and corrected states, upheld blocks, optional answer feedback, safe return, reset and trace export. Keyboard operation and layout overflow are checked at 390 and 320 pixels. Twelve automated tests passed; screenshots show actual rendered states. These checks demonstrate software behaviour, not participant experience, reduced warning fatigue or security effectiveness.
 
-The initial implementation was changed to an English interface after confirming the original English assignment document. A later change corrected the rule values so all English emotion and action choices matched the JavaScript engine. The crisis response was also separated from ordinary suggestions to prevent unsafe conversational fallback. These changes are linked conceptually to the scope and safety rationale above.
+![Figure 3. Actual guided-warning interface captured during automated verification.](evidence/01-guided-warning.png)
 
-Because no source repository or Assignment 1 submission was available when the prototype began, I cannot accurately name or link the original literature or feedback sources here. The report should be updated by the student with the relevant Assignment 1 references and their exact application to the choices. The design links below are therefore general scholarly sources and should be verified against course concepts.
+The architecture uses fixed signals without probabilities because invented confidence scores would imply unsupported accuracy. Further work should compare matched tasks with participants of varied digital experience, measuring explanations, perceived control and legitimate-task completion alongside decisions. Scenario order would need counterbalancing, and longer-term warning fatigue would require a different study. Real threat detection, browser integration and genuine review remain outside this submission.
+
+## 5. Repository and development record
+
+The [private repository](https://github.com/thisispossiable/quiet-space-a2) contains the implementation, tests, figures and [README development record](https://github.com/thisispossiable/quiet-space-a2/blob/a2-safebrowse-v1/README.md). Submitted version: [a2-safebrowse-v1](https://github.com/thisispossiable/quiet-space-a2/tree/a2-safebrowse-v1). Assessors need repository access while it remains private. The README identifies AI assistance and distinguishes agent checks from student review.
 
 ## References
 
-- Norman, D. A. (2013). *The Design of Everyday Things: Revised and Expanded Edition*. Basic Books.
-- Nielsen, J. (1994). “Enhancing the explanatory power of usability heuristics.” *Proceedings of ACM CHI '94*.
-- Shneiderman, B. (1997). “Direct manipulation for comprehensible, predictable and controllable user interfaces.” *Proceedings of IUI '97*.
-- World Health Organization. (2022). *World mental health report: Transforming mental health for all*. WHO.
+Akhawe, D. and Felt, A.P. (2013) 'Alice in Warningland: A Large-Scale Field Study of Browser Security Warning Effectiveness', *22nd USENIX Security Symposium*, pp. 257-272. Available at: https://www.usenix.org/conference/usenixsecurity13/technical-sessions/presentation/akhawe
 
-All visual and code artefacts are original to this project unless a named source is added to the repository. The student remains responsible for checking each claim and for replacing or extending the references with Assignment 1 literature and course feedback.
+Egelman, S., Cranor, L.F. and Hong, J. (2008) 'You've Been Warned: An Empirical Study of the Effectiveness of Web Browser Phishing Warnings', *Proceedings of CHI '08*, pp. 1065-1074. https://doi.org/10.1145/1357054.1357219
+
+Sunshine, J., Egelman, S., Almuhimedi, H., Atri, N. and Cranor, L.F. (2009) 'Crying Wolf: An Empirical Study of SSL Warning Effectiveness', *18th USENIX Security Symposium*. Available at: https://www.usenix.org/conference/usenixsecurity09/technical-sessions/presentation/crying-wolf-empirical-study-ssl-warning
+
+Reused material: the research question, critical synthesis and three references are developed from my A1. Figures and fixtures were created for A2 with AI assistance; they do not reproduce the studies' original warning interfaces. AI assistance is disclosed in the README.

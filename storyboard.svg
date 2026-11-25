@@ -1,57 +1,74 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="620" viewBox="0 0 1400 620">
-  <rect width="1400" height="620" fill="#f7faf8"/>
-  <text x="700" y="48" text-anchor="middle" font-family="Segoe UI, Arial" font-size="30" font-weight="700" fill="#26382f">Illustrated Interaction — Three Implemented Scenarios</text>
-  <g transform="translate(40,90)">
-    <rect width="420" height="470" rx="18" fill="#fff" stroke="#d5e0da" stroke-width="2"/>
-    <text x="210" y="38" text-anchor="middle" font-family="Segoe UI, Arial" font-size="20" font-weight="700" fill="#26382f">1. Moderate stress</text>
-    <rect x="25" y="70" width="370" height="70" rx="12" fill="#edf4ef"/>
-    <text x="210" y="98" text-anchor="middle" font-family="Segoe UI, Arial" font-size="15" fill="#52665d">User: selects “Anxious”</text>
-    <text x="210" y="122" text-anchor="middle" font-family="Segoe UI, Arial" font-size="15" fill="#52665d">Stress: 6/10</text>
-    <path d="M210 140 V180" stroke="#315b48" stroke-width="3" marker-end="url(#a)"/>
-    <rect x="25" y="195" width="370" height="100" rx="12" fill="#315b48"/>
-    <text x="210" y="228" text-anchor="middle" font-family="Segoe UI, Arial" font-size="15" fill="#fff">System applies moderate-stress</text>
-    <text x="210" y="252" text-anchor="middle" font-family="Segoe UI, Arial" font-size="15" fill="#fff">and anxious-state rules</text>
-    <text x="210" y="276" text-anchor="middle" font-family="Segoe UI, Arial" font-size="15" fill="#fff">Result: breathing or a short walk</text>
-    <path d="M210 295 V335" stroke="#315b48" stroke-width="3" marker-end="url(#a)"/>
-    <rect x="25" y="350" width="370" height="85" rx="12" fill="#fbfbea" stroke="#c6ca91"/>
-    <text x="210" y="382" text-anchor="middle" font-family="Segoe UI, Arial" font-size="15" fill="#52665d">Control: choose another action</text>
-    <text x="210" y="408" text-anchor="middle" font-family="Segoe UI, Arial" font-size="15" fill="#52665d">or clear the session</text>
-  </g>
-  <g transform="translate(490,90)">
-    <rect width="420" height="470" rx="18" fill="#fff" stroke="#d5e0da" stroke-width="2"/>
-    <text x="210" y="38" text-anchor="middle" font-family="Segoe UI, Arial" font-size="20" font-weight="700" fill="#26382f">2. High stress</text>
-    <rect x="25" y="70" width="370" height="70" rx="12" fill="#edf4ef"/>
-    <text x="210" y="98" text-anchor="middle" font-family="Segoe UI, Arial" font-size="15" fill="#52665d">User: stress 9/10</text>
-    <text x="210" y="122" text-anchor="middle" font-family="Segoe UI, Arial" font-size="15" fill="#52665d">Chooses “Slow breathing”</text>
-    <path d="M210 140 V180" stroke="#315b48" stroke-width="3" marker-end="url(#a)"/>
-    <rect x="25" y="195" width="370" height="100" rx="12" fill="#315b48"/>
-    <text x="210" y="228" text-anchor="middle" font-family="Segoe UI, Arial" font-size="15" fill="#fff">System recommends one three-minute</text>
-    <text x="210" y="252" text-anchor="middle" font-family="Segoe UI, Arial" font-size="15" fill="#fff">breathing exercise and one</text>
-    <text x="210" y="276" text-anchor="middle" font-family="Segoe UI, Arial" font-size="15" fill="#fff">controllable next step</text>
-    <path d="M210 295 V335" stroke="#315b48" stroke-width="3" marker-end="url(#a)"/>
-    <rect x="25" y="350" width="370" height="85" rx="12" fill="#edf4ef"/>
-    <text x="210" y="382" text-anchor="middle" font-family="Segoe UI, Arial" font-size="15" fill="#52665d">Feedback: starts or stops timer</text>
-    <text x="210" y="408" text-anchor="middle" font-family="Segoe UI, Arial" font-size="15" fill="#52665d">and can reassess stress</text>
-  </g>
-  <g transform="translate(940,90)">
-    <rect width="420" height="470" rx="18" fill="#fff" stroke="#d5e0da" stroke-width="2"/>
-    <text x="210" y="38" text-anchor="middle" font-family="Segoe UI, Arial" font-size="20" font-weight="700" fill="#26382f">3. Safety phrase</text>
-    <rect x="25" y="70" width="370" height="70" rx="12" fill="#edf4ef"/>
-    <text x="210" y="98" text-anchor="middle" font-family="Segoe UI, Arial" font-size="15" fill="#52665d">User enters a crisis phrase</text>
-    <text x="210" y="122" text-anchor="middle" font-family="Segoe UI, Arial" font-size="15" fill="#52665d">such as “I want to die”</text>
-    <path d="M210 140 V180" stroke="#315b48" stroke-width="3" marker-end="url(#a)"/>
-    <rect x="25" y="195" width="370" height="100" rx="12" fill="#fbfbea" stroke="#b7be74"/>
-    <text x="210" y="228" text-anchor="middle" font-family="Segoe UI, Arial" font-size="15" fill="#52665d">System overrides ordinary advice</text>
-    <text x="210" y="252" text-anchor="middle" font-family="Segoe UI, Arial" font-size="15" fill="#52665d">and gives emergency / trusted-person</text>
-    <text x="210" y="276" text-anchor="middle" font-family="Segoe UI, Arial" font-size="15" fill="#52665d">guidance</text>
-    <path d="M210 295 V335" stroke="#315b48" stroke-width="3" marker-end="url(#a)"/>
-    <rect x="25" y="350" width="370" height="85" rx="12" fill="#315b48"/>
-    <text x="210" y="382" text-anchor="middle" font-family="Segoe UI, Arial" font-size="15" fill="#fff">Control: fixed safety boundary</text>
-    <text x="210" y="408" text-anchor="middle" font-family="Segoe UI, Arial" font-size="15" fill="#fff">No clinical claim or diagnosis</text>
-  </g>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="740" viewBox="0 0 1200 740" role="img" aria-labelledby="title description">
+  <title id="title">Three implemented SafeBrowse interaction sequences</title>
+  <desc id="description">A guided warning allows an internal simulation or safe return. A protective block removes bypass and supports inspection. A legitimate site wrongly flagged can be reviewed using a fixed outcome before a local task is restored. All inputs are scripted.</desc>
   <defs>
-    <marker id="a" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#315b48"/>
-    </marker>
+    <marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4" orient="auto"><path d="M0 0 8 4 0 8" fill="none" stroke="#50634d" stroke-width="2"/></marker>
+    <style>text{font-family:Arial,sans-serif;fill:#253d2d}.heading{font-size:19px;font-weight:bold}.body{font-size:15px}.small{font-size:13px;fill:#52634c}.arrow{stroke:#50634d;stroke-width:2;marker-end:url(#arrow)}.card{fill:white;stroke:#b2bda5}.step{fill:#eef1e6}</style>
   </defs>
+  <rect width="1200" height="740" fill="#f5f4ee"/>
+  <text x="35" y="43" font-size="27" font-weight="bold">SafeBrowse / three ways a warning changes a task</text>
+  <text x="35" y="72" class="small">Illustrated implemented sequences, not participant observations. All sites and risk evidence are fixtures.</text>
+  <g transform="translate(30 104)">
+    <rect width="365" height="586" rx="12" class="card"/>
+    <text x="20" y="35" class="heading">01 / Guided choice</text>
+    <text x="20" y="61" class="small">Goal: reach a campus service</text>
+    <rect x="18" y="85" width="329" height="90" rx="8" class="step"/>
+    <text x="32" y="113" class="body">USER: chooses login-mismatch fixture</text>
+    <text x="32" y="140" class="body">Selects guided policy → evaluates</text>
+    <path d="M182 178 V211" class="arrow"/>
+    <rect x="18" y="220" width="329" height="100" rx="8" fill="#f5ead3"/>
+    <text x="32" y="250" class="body">SYSTEM: interrupts with a warning</text>
+    <text x="32" y="276" class="body">Shows mismatch when expanded</text>
+    <text x="32" y="302" class="body">Keeps safe return available</text>
+    <path d="M182 323 V356" class="arrow"/>
+    <rect x="18" y="365" width="329" height="100" rx="8" class="step"/>
+    <text x="32" y="395" class="body">USER: continues in simulation</text>
+    <text x="32" y="422" class="body">SYSTEM: opens internal placeholder</text>
+    <text x="32" y="449" class="body">Optional understanding feedback</text>
+    <text x="20" y="509" class="small">CONTROL: return, inspect, review or continue</text>
+    <text x="20" y="536" class="small">BOUNDARY: no real navigation or login</text>
+    <text x="20" y="562" class="small">EVIDENCE: screenshot 01 + local trace</text>
+  </g>
+  <g transform="translate(418 104)">
+    <rect width="365" height="586" rx="12" class="card"/>
+    <text x="20" y="35" class="heading">02 / Protective default</text>
+    <text x="20" y="61" class="small">Goal: avoid an unexpected download</text>
+    <rect x="18" y="85" width="329" height="90" rx="8" class="step"/>
+    <text x="32" y="113" class="body">USER: chooses known-risk fixture</text>
+    <text x="32" y="140" class="body">Selects protective policy → evaluates</text>
+    <path d="M182 178 V211" class="arrow"/>
+    <rect x="18" y="220" width="329" height="100" rx="8" fill="#f4e3db"/>
+    <text x="32" y="250" class="body">SYSTEM: blocks before continuation</text>
+    <text x="32" y="276" class="body">Explains fixture rule P1</text>
+    <text x="32" y="302" class="body">No bypass button</text>
+    <path d="M182 323 V356" class="arrow"/>
+    <rect x="18" y="365" width="329" height="100" rx="8" class="step"/>
+    <text x="32" y="395" class="body">USER: returns to safety</text>
+    <text x="32" y="422" class="body">SYSTEM: stops simulated navigation</text>
+    <text x="32" y="449" class="body">Records action, not informed consent</text>
+    <text x="20" y="509" class="small">CONTROL: inspect, request review or return</text>
+    <text x="20" y="536" class="small">BOUNDARY: no executable or live scanner</text>
+    <text x="20" y="562" class="small">EVIDENCE: screenshot 02 + local trace</text>
+  </g>
+  <g transform="translate(806 104)">
+    <rect width="365" height="586" rx="12" class="card"/>
+    <text x="20" y="35" class="heading">03 / A false positive</text>
+    <text x="20" y="61" class="small">Goal: recover a legitimate library task</text>
+    <rect x="18" y="85" width="329" height="90" rx="8" class="step"/>
+    <text x="32" y="113" class="body">USER: evaluates stale-signal fixture</text>
+    <text x="32" y="140" class="body">SYSTEM: protective block, uncertainty</text>
+    <path d="M182 178 V211" class="arrow"/>
+    <rect x="18" y="220" width="329" height="100" rx="8" fill="#eeeada"/>
+    <text x="32" y="250" class="body">USER: requests review → pending</text>
+    <text x="32" y="276" class="body">Access remains paused</text>
+    <text x="32" y="302" class="body">Runs clearly labelled scripted review</text>
+    <path d="M182 323 V356" class="arrow"/>
+    <rect x="18" y="365" width="329" height="100" rx="8" class="step"/>
+    <text x="32" y="395" class="body">SYSTEM: corrects fixture false positive</text>
+    <text x="32" y="422" class="body">USER: opens reviewed simulation</text>
+    <text x="32" y="449" class="body">SYSTEM: restores local archive task</text>
+    <text x="20" y="509" class="small">CONTROL: challenge decision without bypass</text>
+    <text x="20" y="536" class="small">BOUNDARY: no real reviewer contacted</text>
+    <text x="20" y="562" class="small">EVIDENCE: screenshot 03 + local trace</text>
+  </g>
 </svg>
