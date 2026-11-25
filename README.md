@@ -1,6 +1,6 @@
 # SafeBrowse: Who Carries the Risk?
 
-Prose word count: 546 (headings included; code and setup commands excluded).
+Prose word count: 531 (headings included; code and setup commands excluded).
 
 A1-aligned browser-warning interaction prototype. The repository retains its original `quiet-space-a2` name and earlier wellbeing commits so the change of scope remains traceable.
 
@@ -50,15 +50,15 @@ Twelve automated tests cover policy outcomes, both review results, internal-only
 
 ## AI assistance and authorship
 
-An AI assistant using Copilot SDK in VS Code generated implementation code, tests, diagram source and report drafts. Requests included aligning the prototype with A1 and checking behaviour against written claims. The agent ran automated checks, inspected screenshots, and revised the design to label rules, threats and reviews honestly. This does **not** establish that the student personally checked every output.
+The student supplied A1, chose the project direction and requested revisions. An AI assistant using Copilot SDK in VS Code assisted by generating implementation code, tests, diagram source and report drafts, aligning the prototype with A1 and checking behaviour against documented claims.
 
-The student supplied A1, chose the direction and requested changes. Before submission, the student must review the code and claims, understand the decisions, verify citations and map the named design concepts to the actual Weeks 1-4 materials. Those slides and lecturer feedback were not supplied; no matching course coverage or feedback has been invented.
+Verification included agent-run automated tests and screenshot inspection. These checks document prototype behaviour, not participant research or evidence of security effectiveness. Threat signals and review outcomes remain explicitly simulated. The student is responsible for the submitted work, including its claims, references and compliance with course requirements. Alignment with specific Weeks 1-4 materials has not been independently verified.
 
 ## Submission files and access
 
 - [Report source](PROJECT_REPORT.md), [printable report](report.html), [PDF](SafeBrowse-A2-Report.pdf), [editable Word report](SafeBrowse-A2-Report.docx).
 - [System diagram](system-diagram.svg) and [storyboard](storyboard.svg); rendered versions and real UI screenshots are in [evidence](evidence/).
-- Submitted version: Git tag `a2-safebrowse-v1.1`.
+- Submitted version: Git tag `a2-safebrowse-v1.2`.
 - [Repository](https://github.com/thisispossiable/quiet-space-a2) is public at the owner's request. Assessors can inspect the code, report and development record without signing in.
 
 No separate ZIP is needed. No credentials or original A1 document are included.

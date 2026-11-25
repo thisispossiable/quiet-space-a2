@@ -56,7 +56,7 @@ The architecture uses fixed signals without probabilities because invented confi
 
 ## 5. Repository and development record
 
-The [public repository](https://github.com/thisispossiable/quiet-space-a2) contains the implementation, tests, figures and [README development record](https://github.com/thisispossiable/quiet-space-a2/blob/a2-safebrowse-v1.1/README.md). Submitted version: [a2-safebrowse-v1.1](https://github.com/thisispossiable/quiet-space-a2/tree/a2-safebrowse-v1.1). Assessors can inspect the repository without signing in. The README identifies AI assistance and distinguishes agent checks from student review.
+The [public repository](https://github.com/thisispossiable/quiet-space-a2) contains the implementation, tests, figures and [README development record](https://github.com/thisispossiable/quiet-space-a2/blob/a2-safebrowse-v1.2/README.md). Submitted version: [a2-safebrowse-v1.2](https://github.com/thisispossiable/quiet-space-a2/tree/a2-safebrowse-v1.2). Assessors can inspect the repository without signing in. The README identifies AI assistance and distinguishes agent checks from student review.
 
 ## References
 
